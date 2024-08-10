@@ -11,6 +11,7 @@ pprint(yard)                 # for test only
 # dp 代表一个动态规划表，用于存储网格中每个位置作为右下角的最大正方形区域的边长。具体来说：
 # dp[i][j] 表示以 (i, j) 作为右下角的最大正方形区域的边长。
 # dp 表是一个与网格 yard 同样大小的二维数组，初始值为 0。
+
 dp = [[0 for _ in range(N)] for _ in range(N)]
 
 max_size = 0
@@ -25,6 +26,16 @@ for i in range(N):
                 # 我们通过查看它上方、左方和左上角的 dp 值来确定当前最大正方形的边长。
                 # dp[i][j] 的值为这三者中的最小值加 1
             max_size = max(max_size, dp[i][j])
+        print(i, j)
+        pprint(dp)
             #  更新当前找到的最大正方形边长
 
 print(max_size)
+
+for k in range(N):
+    for l in range(n):
+        
+        if yard[k][l] == 0:
+            # dp
+            if k == 0 or l == 0:
+                dp[k][l] = 1
