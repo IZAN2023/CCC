@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color:antiquewhite;
+        }
+        h1 {
+            color: brown;
+        }
+        .completed-list {
+            margin-top: 20px;
+        }
+        #newBatchBtn {
+            margin-top: 20px;
+        }
+        .invisibility {
+            visibility: hidden;
+        }
+    </style>
+    <title>CCC练习随机选择器</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CCC练习随机选择器</h1>
+        <ul id="root" class="list-group"></ul>
+        <br />
+        <p>备注：有些年份的题，junior的4、5和senior的1、2重叠，如果“查看源题”报错，请点击“<span style="color: red;">Senior源题</span>”。</p>
+
+        <h3>已完成题目：</h3>
+        <div id="completed-list" class="completed-list"></div>
+        
+        <button id="newBatchBtn" class="btn btn-secondary invisibility" disabled>心情不错，再来一批</button>
+    </div>
+
+    <script>
+        let completedProblems = {}; // 用于存储已完成的题目
+        let completedCount = 0; // 统计完成的题目数量
+        const totalProblems = 5; // 总题目数量
+
+        function generateProblem(index) {
+            let year = Math.floor(Math.random() * 9 + 2016);
+            problemObj = {
+                year: year,
+                index: index + 1,
+                text: `${year}年 Junior第${index + 1}题`
+            }
+            return problemObj;
+        }
+
+        function addToCompleted(problemObj) {
+            if (!completedProblems[problemObj.year]) {
+                completedProblems[problemObj.year] = [];
+            }
+            completedProblems[problemObj.year].push(problemObj.index);
+            updateCompletedList();
+        }
+
+        function updateCompletedList() {
+            let completedListDiv = document.getElementById("completed-list");
+            completedListDiv.innerHTML = "";
+            for (const year in completedProblems) {
+                let yearHeader = document.createElement('h4');
+                yearHeader.textContent = `${year}年`;
+                completedListDiv.appendChild(yearHeader);
+
+                let ul = document.createElement('ul');
+                ul.classList.add('list-group', 'mb-3');
+                completedProblems[year].forEach((index) => {
+                    let li = document.createElement('li');
+                    li.classList.add('list-group-item');
+                    li.textContent = `J${index}`;
+                    ul.appendChild(li);
+                });
+                completedListDiv.appendChild(ul);
+            }
+        }
+
+        function checkAllCompleted() {
+            if (completedCount === totalProblems) {
+                const btn = document.getElementById("newBatchBtn");
+                btn.disabled = false;
+                btn.classList.remove("invisibility");
+            }
+        }
+
+        function renderProblems() {
+            let root = document.getElementById("root");
+            root.innerHTML = ''; // 先清空列表
+            completedCount = 0; // 重置完成计数
+            document.getElementById("newBatchBtn").disabled = true; // 禁用“再来一批”按钮
+            document.getElementById("newBatchBtn").classList.add("invisibility");
+            
+            for (let i = 0; i < totalProblems; i++) {
+                let problem = generateProblem(i);
+                const li = document.createElement('li');
+                li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+
+                // 创建题目文本
+                let problemText = document.createElement('span');
+                problemText.textContent = problem.text;
+                li.appendChild(problemText);
+
+                // 创建按钮容器
+                let btnGroup = document.createElement('div');
+
+                // 链接按钮
+                if (i > 2) {
+                    let linkBtn2 = document.createElement('button');
+                    linkBtn2.classList.add('btn', 'btn-primary', 'btn-sm', 'me-2');
+                    linkBtn2.textContent = 'Senior源题';
+                    linkBtn2.onclick = () => {
+                        window.open(`https://dmoj.ca/problem/ccc${problem.year%100}s${problem.index - 3}`,'_blank');
+                    }
+                    btnGroup.appendChild(linkBtn2);                   
+                }
+
+                let linkBtn = document.createElement('button');
+                linkBtn.classList.add('btn', 'btn-primary', 'btn-sm', 'me-2');
+                linkBtn.textContent = '查看源题';
+                linkBtn.onclick = () => {
+                    window.open(`https://dmoj.ca/problem/ccc${problem.year%100}j${problem.index}`,'_blank');
+                }
+                btnGroup.appendChild(linkBtn);
+
+
+                // 刷新按钮
+                let refreshBtn = document.createElement('button');
+                refreshBtn.classList.add('btn', 'btn-warning', 'btn-sm', 'me-2');
+                refreshBtn.textContent = '重新生成';
+                refreshBtn.onclick = () => {
+                    problem = {};
+                    problem = generateProblem(i); // 生成新的题目
+                    problemText.textContent = problem.text;
+                };
+                btnGroup.appendChild(refreshBtn);
+
+
+                // 完成按钮
+                let completeBtn = document.createElement('button');
+                completeBtn.classList.add('btn', 'btn-success', 'btn-sm', 'me-2');
+                completeBtn.textContent = '标记完成';
+                completeBtn.onclick = () => {
+                    completeBtn.disabled = true; // 禁用“标记完成”按钮
+                    refreshBtn.disabled = true; // 禁用“重新生成”按钮
+                    addToCompleted(problem); // 添加到已完成题目列表
+                    completedCount++; // 增加完成计数
+                    checkAllCompleted(); // 检查是否所有题目已完成
+                };
+                btnGroup.appendChild(completeBtn);
+
+                li.appendChild(btnGroup);
+                root.appendChild(li);
+            }
+        }
+
+        // 初始渲染
+        renderProblems();
+
+        // "再来一批"按钮事件
+        document.getElementById("newBatchBtn").onclick = () => {
+            renderProblems(); // 重新生成题目
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
