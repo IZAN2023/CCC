@@ -11,3 +11,6 @@ You can find all of these problems at
 https://cemc.uwaterloo.ca/contests/past_contests.html#ccc
 
 https://dmoj.ca/
+
+During the practice, you can use the data in testdata.zip for local testing, or you can register an account on dmoj.ca and submit the code for testing. The following is an example of a local testing method:
+python xxx.py < ./testdata/2021/j1/j1.01.in
