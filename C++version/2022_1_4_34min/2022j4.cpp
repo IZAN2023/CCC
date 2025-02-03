@@ -3,13 +3,13 @@ using namespace std;
 int main(){
     int num;
     cin >> num;
-    int remainning;
+    int numagian;
     int total = 0;
     for (int i = 0; i < num/4+1; i++){
-        remainning = num - 4 * i;
-        if (remainning % 5 == 0){
+        numagian = num - 4 * i;
+        if (numagian % 5 == 0){
             total++;
         }
     }
-    cout << total << endl;
+    cout << total;
 }
