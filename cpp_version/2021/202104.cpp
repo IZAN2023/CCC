@@ -1,26 +1,9 @@
+//https://dmoj.ca/problem/ccc21j4
+//CCC '21 J4 - Arranging Books
+
 #include <bits/stdc++.h>
 using namespace std;
-// int main(){
-//     string str_1;
-//     string str_2;
-//     int total = 0;
-//     cin >> str_1;
-//     str_2 = str_1;
-//     sort(str_1.begin(), str_1.end());
-//     // cout << str_1;
-//     for (size_t i = 0; i < str_2.size(); i++){
-//         if (str_1[i] != str_2[i]){
-//             total++;
-//         }
-//     }
-//     if (total % 2 != 0){
-//         cout << total /2 +1 << endl;
-//     }
-//     else if (total %2 == 0){
-//         cout << total/2 << endl;
-//     }
 
-// }
 int main(){
     int num_l = 0;
     int num_m = 0;
@@ -30,6 +13,7 @@ int main(){
     cin >> shelf;
     int m_in_l = 0;
     int l_in_m = 0;
+    //得知出现了多少个L和M
     for (char c : shelf){
         if (c == 'L'){
             num_l++;
@@ -38,6 +22,7 @@ int main(){
             num_m++;
         }
     }
+    //如果第i个是非L就加次数
     for (int i = 0; i < num_l; i++){
         if (shelf[i] == 'M'){
             m_in_l++;
@@ -47,6 +32,7 @@ int main(){
             misplaced_l++;
         }
     }
+    //如果第j个不是非L就加次数
     for (int j = num_l; j < num_l+num_m; j++){
         if (shelf[j] == 'L'){
             l_in_m++;

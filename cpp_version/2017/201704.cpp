@@ -1,3 +1,7 @@
+//https://dmoj.ca/problem/ccc17j4
+//CCC '17 J4 - Favourite Times
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

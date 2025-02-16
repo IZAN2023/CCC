@@ -1,3 +1,7 @@
+//https://dmoj.ca/problem/ccc17j3
+//CCC '17 J3 - Exactly Electrical
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc19j3
+//CCC '19 J3 - Cold Compress
+
 #include <bits/stdc++.h>
 using namespace std;
 void print_vector(vector<string>& vec){

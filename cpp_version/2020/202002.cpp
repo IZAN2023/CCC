@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc20j2
+//CCC '20 J2 - Epidemiology
+
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc23j3
+//CCC '23 J3 - Special Event
+
 #include <bits/stdc++.h>
 using namespace std;
 template <typename T>

@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc20j4
+//CCC '20 J4 - Cyclic Shifts
+
 #include <bits/stdc++.h>
 using namespace std;
 

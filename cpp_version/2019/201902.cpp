@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc19j2
+//CCC '19 J2 - Time to Decompress
+
 #include <bits/stdc++.h>
 using namespace std;
 void print_vector(vector<string>& vec){

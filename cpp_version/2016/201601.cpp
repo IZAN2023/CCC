@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc16j1
+//CCC '16 J1 - Tournament Selection
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
@@ -21,6 +24,5 @@ int main(){
     else{
         cout << -1 << endl;
     }
-
 
 }

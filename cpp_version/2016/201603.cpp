@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc16j3
+//CCC '16 J3 - Hidden Palindrome
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

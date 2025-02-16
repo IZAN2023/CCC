@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc21j1
+//CCC '21 J1 - Boiling Water
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

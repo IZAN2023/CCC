@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc18j3
+//CCC '18 J3 - Are we there yet?
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

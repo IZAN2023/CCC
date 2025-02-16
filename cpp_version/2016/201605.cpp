@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc16s2
+//CCC '16 S2 - Tandem Bicycle
+
 #include <bits/stdc++.h>
 using namespace std;
 template <typename T>

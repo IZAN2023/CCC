@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc20j3
+//CCC '20 J3 - Art
+
 #include <bits/stdc++.h>
 using namespace std;
 // template <typename T>

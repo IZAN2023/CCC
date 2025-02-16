@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc16j4
+//CCC '16 J4 - Arrival Time
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

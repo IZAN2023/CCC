@@ -1,3 +1,7 @@
+//https://dmoj.ca/problem/ccc22j1
+//CCC '22 J1 - Cupcake Party
+
+
 #include <bits/stdc++.h> 
 using namespace std;
 int main(){

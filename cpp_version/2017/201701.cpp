@@ -1,3 +1,7 @@
+//https://dmoj.ca/problem/ccc17j1
+//CCC '17 J1 - Quadrant Selection
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

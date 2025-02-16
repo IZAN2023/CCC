@@ -1,22 +1,21 @@
+//https://dmoj.ca/problem/ccc19j1
+//CCC '19 J1 - Winning Score
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int num_1_apple;
-    int num_2_apple;
-    int num_3_apple;
-    int num_1_banana;
-    int num_2_banana;
-    int num_3_banana;
-    int appletotal;
-    int bananatotal;
-    cin >> num_1_apple;
-    cin >> num_2_apple;
-    cin >> num_3_apple;
-    cin >> num_1_banana;
-    cin >> num_2_banana;
-    cin >> num_3_banana;
-    appletotal = num_1_apple*3 +num_2_apple*2 +num_3_apple*1;
-    bananatotal = num_1_banana*3 +num_2_banana*2 +num_3_banana*1;
+    int appletotal = 0;
+    int bananatotal = 0;
+    for(int i = 3; i >= 1; i--){
+        int n;
+        cin >> n;
+        appletotal += n * i;
+    }
+    for(int i =3; i >= 1; i--){
+        int n1;
+        cin >> n1;
+        bananatotal += n1 * i;
+    }
     if (appletotal > bananatotal){
         cout << "A" << endl;
     }

@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc15j1
+//CCC '15 J1 - Special Day
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

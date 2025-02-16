@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc19s1
+//CCC '19 S1 - Flipper
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

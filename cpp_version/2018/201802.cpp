@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc18j2
+//CCC '18 J2 - Occupy parking
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

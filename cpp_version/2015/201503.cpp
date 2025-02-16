@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc15j3
+//CCC '15 J3 - Rövarspråket
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

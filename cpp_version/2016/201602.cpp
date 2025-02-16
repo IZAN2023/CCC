@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc16j2
+//CCC '16 J2 - Magic Squares
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

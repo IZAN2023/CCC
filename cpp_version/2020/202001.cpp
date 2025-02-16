@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc20j1
+//CCC '20 J1 - Dog Treats
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

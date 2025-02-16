@@ -1,3 +1,7 @@
+//https://dmoj.ca/problem/ccc17j2
+//CCC '17 J2 - Shifty Sum
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

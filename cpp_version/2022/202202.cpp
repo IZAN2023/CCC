@@ -1,3 +1,7 @@
+//https://dmoj.ca/problem/ccc22j2
+//CCC '22 J2 - Fergusonball Ratings
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){

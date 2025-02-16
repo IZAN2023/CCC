@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc15j4
+//CCC '15 J4 - Wait Time
+
 #include <bits/stdc++.h>
 using namespace std;
 

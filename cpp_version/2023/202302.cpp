@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc23j2
+//CCC '23 J2 - Chili Peppers
+
 #include <bits/stdc++.h>
 
 using namespace std;

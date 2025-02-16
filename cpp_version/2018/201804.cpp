@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc18s1
+//CCC '18 S1 - Voronoi Villages
+
 #include <bits/stdc++.h>
 using namespace std;
 // template <typename T>

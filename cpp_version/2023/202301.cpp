@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc23j1
+//CCC '23 J1 - Deliv-e-droid
+
 #include <iostream>
 using namespace std;
 int main(){

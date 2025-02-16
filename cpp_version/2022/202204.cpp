@@ -1,3 +1,6 @@
+//https://dmoj.ca/problem/ccc22s2
+//CCC '22 J4 - Arranging Books
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
